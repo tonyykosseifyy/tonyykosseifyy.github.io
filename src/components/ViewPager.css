@@ -1,0 +1,8 @@
+.awssld__wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.awssld__content {
+    overflow: hidden;
+}
