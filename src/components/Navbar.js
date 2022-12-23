@@ -17,18 +17,20 @@ const GRADIENTS = [
   null,
   'https://products.ls.graphics/mesh-gradients/images/36.-Pale-Chestnut-p-130x130q80.jpeg',
 ]
+const pages = [
+  "Home" , "About" , "Work" , "Contact Us"
+];
 
-export default function App() {
+const icons = ["home" , "about" , "work" , "contact"]
+
+export default function App(props) {
   return (
     <div className={styles.body}>
       <Dock>
-        {GRADIENTS.map((src, index) =>
-          src ? (
+        {pages.map((src, index) => (
             <DockCard key={src}>
-              <Card src={src} />
+              <Card src={icons[index]} />
             </DockCard>
-          ) : (
-            <DockDivider key={index} />
           )
         )}
       </Dock>

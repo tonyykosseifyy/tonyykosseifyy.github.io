@@ -12,9 +12,11 @@ const App = () => {
     }
     return (
       <section>
-        <ViewPager currentFace={currentFace}>
-          {/*<Navbar handleButtonClick={(newFace) => handleButtonClick(newFace)}/>*/}
+        {/*<ViewPager currentFace={currentFace}>
+          
         </ViewPager>
+        */}
+        <Navbar handleButtonClick={(newFace) => handleButtonClick(newFace)}/>
       </section>
     );
 };

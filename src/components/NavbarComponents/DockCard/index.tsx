@@ -78,6 +78,7 @@ export const DockCard = ({ children }: DockCardProps) => {
   const isAnimating = React.useRef(false)
 
   const handleClick = () => {
+    console.log("clicked")
     if (!isAnimating.current) {
       isAnimating.current = true
       opacity.start(0.5)
