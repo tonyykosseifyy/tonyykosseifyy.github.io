@@ -1,0 +1,43 @@
+/* rgb(97,218,251);
+*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400&family=Open+Sans:wght@300&display=swap');
+@keyframes fade {
+    0% {
+        opacity: 0 ;
+    }
+    100% {
+        opacity: 1;
+    }
+}   
+
+.home {
+    font-family: 'League Spartan', sans-serif;
+}
+.presentation {
+    text-align: center;
+}
+.presentation > h1 {
+    font-weight: 400;
+    font-size: 1.8rem ;
+    display: flex ;
+    justify-content: center;
+}
+.presentation > h2 {
+    margin-top: 12px ;
+    font-weight: 100 ;
+    font-size: 1.3rem ;
+}
+h1 > span.name {
+    color: rgb(97,218,251);
+    font-weight: 800 ;
+    opacity: 0;
+    overflow: hidden;
+    animation-name: fade;
+    animation-delay: 1.5s;
+    animation-duration: .45s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    transform-origin: 0px ;
+    margin-left:5px ;
+    display: block; 
+}

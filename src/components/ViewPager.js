@@ -9,8 +9,7 @@ import About from "../pages/About";
 import Work from "../pages/Work";
 import ContactUs from "../pages/ContactUs";
 
-
-const ViewPager = ({ currentFace , setCurrentFace }) => {
+const ViewPager = ({ currentFace , setCurrentFace , setEnd }) => {
   return (
     <AwesomeSlider
       animation="cubeAnimation"
@@ -18,12 +17,26 @@ const ViewPager = ({ currentFace , setCurrentFace }) => {
       bullets={true}
       fillParent
       selected={currentFace || 0 }
-      onTransitionEnd={(ref) => setCurrentFace(ref.currentIndex)}
+      onTransitionEnd={(ref) => {
+        setCurrentFace(ref.currentIndex)
+        setEnd(true)
+      }}
+      onTransitionStart={() => setEnd(false)}
     >
-      <Home />
-      <About />
-      <Work />
-      <ContactUs />
+      <div className="home">
+        <Home />
+      </div>
+
+      <div className="about">
+        <About />
+      </div>
+      <div className="work">
+        <Work />
+      </div>
+      <div className="contact">
+        <ContactUs />
+      </div>
+      
     </AwesomeSlider>
   );
 };
