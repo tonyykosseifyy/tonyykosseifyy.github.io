@@ -1,0 +1,17 @@
+.about {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about .about_me {
+    max-width: 80% ;
+    margin : 0 auto ;
+    text-align: center;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 3rem ;
+}
