@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .card {
   position: relative;
   display: flex;
@@ -10,9 +11,10 @@
   flex-direction: column;
   color: white;
   & img {
-    width: 50%;
+    width: 39%;
     height: 50%;
     border-radius: 50%;
+    object-fit: contain;
   }
   
   &__blur {
@@ -23,12 +25,15 @@
     transform: translateY(10px) scale(1.25);
   }
 
-  &__img {
+  & svg {
     position: relative;
     z-index: 0;
   }
   & h6 {
     font-weight: bold;
     text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px ;
+    letter-spacing: 1px;
   }
 }

@@ -5,6 +5,7 @@ import { Dock } from './NavbarComponents/Dock'
 import { DockCard } from './NavbarComponents/DockCard'
 import { DockDivider } from './NavbarComponents/DockDivider'
 
+import { HomeSvg , WorkSvg , ContactSvg , AboutSvg } from "./NavbarComponents/svgs";
 import styles from './styles.module.scss'
 
 const GRADIENTS = [
@@ -17,11 +18,9 @@ const GRADIENTS = [
   null,
   'https://products.ls.graphics/mesh-gradients/images/36.-Pale-Chestnut-p-130x130q80.jpeg',
 ]
-const pages = [
-  "Home" , "About" , "Work" , "Contact Us"
-];
+const pages = ["Home" , "About" , "Work" , "Contact Us"];
+const svgs = [ HomeSvg, AboutSvg, WorkSvg , ContactSvg ];
 
-const icons = ["home" , "about" , "work" , "contact"]
 
 export default function App(props) {
   return (
@@ -29,7 +28,7 @@ export default function App(props) {
       <Dock>
         {pages.map((src, index) => (
             <DockCard key={src}>
-              <Card src={icons[index]} />
+              <Card index={index} />
             </DockCard>
           )
         )}
