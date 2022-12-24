@@ -9,12 +9,16 @@ import { useDock } from '../Dock/DockContext'
 import styles from './styles.module.scss'
 
 interface DockCardProps {
-  children: React.ReactNode
+  children: React.ReactNode,
+  handleButtonClick: Function,
+  index : Number,
+  indexSelected: Number 
 }
+
 
 const INITIAL_WIDTH = 64
 
-export const DockCard = ({ children }: DockCardProps) => {
+export const DockCard = ({ children , handleButtonClick , index , indexSelected }: DockCardProps) => {
   const cardRef = React.useRef<HTMLButtonElement>(null!)
   /**
    * This doesn't need to be real time, think of it as a static
@@ -79,6 +83,7 @@ export const DockCard = ({ children }: DockCardProps) => {
 
   const handleClick = () => {
     console.log("clicked")
+    handleButtonClick()
     if (!isAnimating.current) {
       isAnimating.current = true
       opacity.start(0.5)
@@ -126,7 +131,7 @@ export const DockCard = ({ children }: DockCardProps) => {
         }}>
         {children}
       </animated.button>
-      <animated.div className={styles['dock-dot']} style={{ opacity }} />
+      <animated.div className={styles['dock-dot']} style={{ opacity: index === indexSelected ? 1:0 }} />
     </div>
   )
 }

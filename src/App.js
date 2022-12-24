@@ -1,22 +1,15 @@
 import React,{ useState } from 'react'
 import "./App.css";
-import Navbar from './components/Navbar';
 import ViewPager from './components/ViewPager';
-
+import Navbar from "./components/Navbar";
 
 
 const App = () => {
-    const [currentFace, setCurrentFace] = useState("front");
-    const handleButtonClick = (newFace) => {
-      setCurrentFace(newFace);
-    }
+  const [ currentFace , setCurrentFace ] = useState(0);
     return (
-      <section>
-        {/*<ViewPager currentFace={currentFace}>
-          
-        </ViewPager>
-        */}
-        <Navbar handleButtonClick={(newFace) => handleButtonClick(newFace)}/>
+      <section className='app'>
+        <ViewPager currentFace={currentFace} setCurrentFace={setCurrentFace} />
+        <Navbar indexSelected={currentFace} handleButtonClick={setCurrentFace} />
       </section>
     );
 };
