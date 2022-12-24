@@ -12,7 +12,10 @@
     right: -70px;
     font-weight: 700 ;
     cursor: pointer ;
-    transition: transform .3s ease-out ;
+    transition: .3s ease-out ;
+}
+.github:hover {
+    background-color: rgb(32, 164, 200);
 }
 .github_notvisible {
     transform: translateY(-400px) rotate(45deg);

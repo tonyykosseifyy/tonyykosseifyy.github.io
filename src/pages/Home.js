@@ -18,7 +18,14 @@ const Home = () => {
         </h2>
       </div>
       
-
+      <div className='social_media_links'>
+        <div className='github-holder'>
+          <img src={require("../components/assets/github.png")} alt="github" />
+        </div>
+        <div className='linkedin-holder'>
+          <img src={require("../components/assets/linkedin.png")} alt="linkedin" />
+        </div>
+      </div>
     </div>
   );
 };

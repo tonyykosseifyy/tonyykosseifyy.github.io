@@ -41,3 +41,31 @@ h1 > span.name {
     margin-left:5px ;
     display: block; 
 }
+
+.social_media_links {
+    display: flex ;
+    flex-direction: column;
+    position: absolute;
+    left: 0 ;
+    top: 60px ;
+}
+
+.social_media_links > div {
+    display: flex ;
+    justify-content: right;
+    width: 120px ;
+    transform: translateX(-50px);
+    transition: transform .3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social_media_links > div:hover {
+    transform: translateX(-10px);
+}
+
+.github-holder {
+    background-color: rgb(38,38,38);
+}
+.linkedin-holder {
+    background-color: rgb(0,119,181); 
+}
