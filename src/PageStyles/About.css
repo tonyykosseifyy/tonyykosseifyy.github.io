@@ -40,17 +40,23 @@
 }
 .about_me_services_containers {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     margin-top: 40px;
 }
 
 .about_me_services_containers > div {
     flex: .3 ;
-    border: 1px solid red ;
+    border: 1px solid rgb(97,218,251) ;
     text-align: center;
-
+    padding: 20px ;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px ;
 }
+
 .about_me_services_containers > div > h3 {
     margin-bottom: 5px; 
 

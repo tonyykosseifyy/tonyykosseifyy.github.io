@@ -35,25 +35,34 @@ function About() {
             </div>
 
             <div className='about_me_services_containers'>
-              <div>
-                <h3>Frontend Apps</h3>
-                <p>
-                  Ensuring that website visitors can easily interact with the page by combining
-                  design, technology and programming as well as taking care of debugging. 
-                  Use modern tech such as React Js , Sass and redux.
-                </p>
-              </div>
-
-              <div>
-                <h3>Backend Apps</h3>
-                <p></p>
-              </div>
-
+              <Fade bottom>
+                <div>
+                  <h3>Frontend Apps</h3>
+                  <p>
+                    Ensuring that website visitors can easily interact with the page. 
+                    Use modern tech such as React Js , Sass and redux.
+                  </p>
+                </div>
+              </Fade>
+              
+              <Fade bottom>
+                <div>
+                  <h3>Backend Apps</h3>
+                  <p>
+                  Build scalable and maintainable server applications using modern technology stacks such as Node.js, Express, and MongoDB.
+                  </p>
+                </div>
+              </Fade>
+              
+            <Fade bottom>
               <div>
                 <h3>Native Apps</h3>
-                <p></p>
+                <p>
+                Use React Native for building simple native mobile applications. React Native is modern, fast, cross-platform, and popular.
+                </p>
               </div>
-           
+            </Fade>
+              
             </div>
 
           </div>
