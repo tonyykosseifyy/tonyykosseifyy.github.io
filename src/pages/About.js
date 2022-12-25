@@ -2,12 +2,14 @@ import React from 'react'
 import "../PageStyles/About.css";
 import Fade from 'react-reveal/Fade';
 
+const expressLink = "https://camo.githubusercontent.com/219d6a3630f0e1bf015780dec8b485c5bd09a541ae52ce3380c8ad0baf680622/68747470733a2f2f6d706e672e737562706e672e636f6d2f32303139303430312f7a73662f6b697373706e672d6d6f6e676f64622d646f63756d656e742d6f7269656e7465642d64617461626173652d6e6f73716c2d6f70656e73686966742d7765622d6170702d646576656c6f706d656e742d736572766369652d696e2d646568726164756e2d35636131623863623861306633322e333730383237383131353534313032343735353635352e6a7067" ;
+
 
 function About() {
   return (
     <div className='about'>
       <div className='about_me'>
-        <Fade>
+        <Fade bottom cascade>
 
         
           <div className='about_me_headings'>
@@ -35,7 +37,7 @@ function About() {
             </div>
 
             <div className='about_me_services_containers'>
-              <Fade bottom>
+              <Fade bottom >
                 <div>
                   <h3>Frontend Apps</h3>
                   <p>
@@ -66,6 +68,7 @@ function About() {
             </div>
 
           </div>
+
 
         </Fade>
 
