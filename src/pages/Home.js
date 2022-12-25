@@ -9,7 +9,7 @@ const Home = () => {
     <div className='home'>
       <div className='presentation'>
         <h1>
-          <Typer onComplete={(e) =>console.log(e) } strings={["Hello, my name is "]} />
+          <Typer strings={["Hello, my name is "]} />
           <span className='name'>Tony Kosseify</span>
         </h1>
 
