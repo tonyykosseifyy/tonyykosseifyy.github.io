@@ -27,7 +27,7 @@ const ViewPager = ({ currentFace , setCurrentFace , setEnd }) => {
         <Home />
       </div>
 
-      <div className="about">
+      <div>
         <About />
       </div>
       <div className="work">
