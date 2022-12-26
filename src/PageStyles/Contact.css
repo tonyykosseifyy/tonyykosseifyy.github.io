@@ -1,12 +1,16 @@
 .contact {
-    height: 100%;
-    padding: 4vh 6vw ;
+    padding: 8vh 6vw ;
+}
+.contact_container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 20vh ;
 }
 .contact_headings {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 6vw ;
+    padding: 0 12vw ;
     width: calc(100vw - 12vw);
 }
 .contact_headings > h1 {
@@ -19,5 +23,47 @@
     font-weight: 100 ;
 }
 .contact_form {
+    flex: .7
+}
+
+.contact_up_cred {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px ;
+}
+.contact_up_cred > div:first-child {
+    margin-right: 20px ;
+}
+.contact_body_container {
     margin-top: 70px ;
+    display: flex ;
+    width: 100% ;
+    align-items: flex-start;
+}
+.social_media_links {
+    flex: .3 ;
+    display: flex;
+    flex-direction: column;
+}
+.contact_social_media_links img {
+    object-fit: contain;
+    width: 40px ;
+}
+.contact_social_media_links > div {
+    overflow: hidden;
+    min-width: 175px ;
+    display: flex ;
+    align-items: center;
+    border-radius: 20px ;
+    padding: 4px 14px ;
+    margin: 10px 0 ;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.contact_social_media_links > div:hover {
+    transform: scale(1.05);
+}
+.contact_social_media_links > div > p {
+    font-weight: 300 ;
+    margin-left: 15px ;
 }

@@ -8,6 +8,8 @@ import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from '@emailjs/browser';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 const theme = createTheme({
   palette: {
@@ -24,7 +26,11 @@ function ContactUs() {
   const [ email , setEmail ] = useState("");
   const [ emailError , setEmailError ] = useState(false);
   const [ message ,setMessage] = useState("") ;
- 
+  const [ open , setOpen ] = useState(false);
+  const [ error , setError ] = useState(false);
+  const handleClose = () => {
+    setOpen(false)
+  }
   const changeEmail = ( str ) => {
     setEmail(str) ;
     let result = str.match(
@@ -44,14 +50,26 @@ function ContactUs() {
     }
     sendEmail(data)
   }
+  const reset = () => {
+    setName("")
+    setEmail("")
+    setMessage("")
+  }
   const sendEmail = (data) => {
     emailjs.send(
       process.env.REACT_APP_SERVICE_ID, 
       process.env.REACT_APP_TEMPLATE_ID, 
       data , 
       process.env.REACT_APP_PUBLIC_KEY
-    ).then((result) => console.log(result.text) , (error) => {
-          console.log(error.text);
+    ).then((result) => {
+      setOpen(true)
+      setError(false)
+      reset()
+      
+    } , (error) => {
+          setError(true)
+          setOpen(false)
+          reset()
       });
   };
   return (
@@ -64,16 +82,54 @@ function ContactUs() {
           </h4>
         </div>
 
-        <div className='contact_form contact_headings'>
-          <FormControl onSubmit={() => handleSubmit()}>
-            <TextField onChange={(e) => setName(e.target.value)} value={name} required color='primary' id="outlined-basic" label="Name" variant="outlined" />
-            <TextField error={emailError} onChange={(e) => changeEmail(e.target.value)} value={email} required type="email" id="filled-basic" label="Email Address" variant="outlined" />
-            <TextField onChange={(e) => setMessage(e.target.value)} value={message} required multiline id="standard-basic" label="Message" variant="outlined" />
-            <Button disabled={!name || !message || !email || emailError} type="submit" onClick={() => handleSubmit()} variant="outlined" endIcon={<SendIcon />}>Submit</Button>
-          </FormControl>
-    
+        <div className="contact_body_container">
+          <div className='contact_form contact_headings'>
+            <FormControl onSubmit={() => handleSubmit()} sx={{width: "100%"}}>
+              <div className='contact_up_cred'>
+                <TextField fullWidth onChange={(e) => setName(e.target.value)} value={name} required color='primary' id="outlined-basic" label="Name" variant="outlined" />
+                <TextField fullWidth error={emailError} onChange={(e) => changeEmail(e.target.value)} value={email} required type="email" id="filled-basic" label="Email Address" variant="outlined" />
+              </div>
+              
+              <TextField sx={{marginBottom:"20px"}} minRows={5} onChange={(e) => setMessage(e.target.value)} value={message} required multiline id="standard-basic" label="Message" variant="outlined" />
+              <Button sx={{minHeight:"50px"}} disabled={!name || !message || !email || emailError} type="submit" onClick={() => handleSubmit()} variant="outlined" endIcon={<SendIcon />}>Submit</Button>
+            </FormControl>
+            <Snackbar anchorOrigin={{vertical:"top", horizontal:"left"}} open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                Your Email has been received!
+              </Alert>
+            </Snackbar>
+            { error && 
+            <Snackbar anchorOrigin={{vertical:"top", horizontal:"left"}} open={error} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                There was an error sending your email, Please try again.
+              </Alert>
+            </Snackbar>}
+          </div>  
+              
+          <div className='contact_social_media_links'>
+              <div style={{backgroundColor: "rgb(38,38,38)"}}>
+                <img src={require("../components/assets/github.png")} alt="github"/>
+                <p>Github</p>
+              </div>
+              <div style={{backgroundColor: "rgb(0,119,181)"}}>
+                <img src={require("../components/assets/linkedin.png")} alt="linkedin"/>
+                <p>Linkedin</p>
+              </div>
+              <div style={{backgroundColor: "rgb(76,175,80)"}}>
+                <img src={require("../components/assets/whatsapp.png")} alt="whatsapp"/>
+                <p>Whatsapp</p>
+              </div>
+              <div style={{backgroundColor: "rgb(92,107,192)"}}>
+                <img style={{width:"35px"}} src={require("../components/assets/discord.png")} alt="discord"/>
+                <p>Discord</p>
+              </div>
+              <div style={{backgroundColor: "rgb(3,155,229)"}}>
+                <img src={require("../components/assets/telegram.png")} alt="Telegram"/>
+                <p>Telegram</p>
+              </div>
+          </div>
         </div>
-        
+          
       </div>      
     </ThemeProvider>
 
