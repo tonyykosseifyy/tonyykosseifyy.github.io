@@ -10,6 +10,7 @@ import SendIcon from '@mui/icons-material/Send';
 import emailjs from '@emailjs/browser';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import Fade from 'react-reveal/Fade';
 
 const theme = createTheme({
   palette: {
@@ -74,6 +75,9 @@ function ContactUs() {
   };
   return (
     <ThemeProvider theme={theme}>
+      <Fade cascade>
+
+      
       <div className='contact contact_container'>
         <div className='contact_headings'>
           <h1>Let's talk</h1>
@@ -107,6 +111,7 @@ function ContactUs() {
           </div>  
               
           <div className='contact_social_media_links'>
+            <Fade cascade>
               <div style={{backgroundColor: "rgb(38,38,38)"}}>
                 <img src={require("../components/assets/github.png")} alt="github"/>
                 <p>Github</p>
@@ -127,10 +132,12 @@ function ContactUs() {
                 <img src={require("../components/assets/telegram.png")} alt="Telegram"/>
                 <p>Telegram</p>
               </div>
+              </Fade>
           </div>
         </div>
           
-      </div>      
+      </div>    
+      </Fade>  
     </ThemeProvider>
 
   )

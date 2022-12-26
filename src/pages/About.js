@@ -37,7 +37,7 @@ function About() {
             </div>
 
             <div className='about_me_services_containers'>
-              <Fade bottom >
+              <Fade>
                 <div>
                   <h3>Frontend Apps</h3>
                   <p>
@@ -47,7 +47,7 @@ function About() {
                 </div>
               </Fade>
               
-              <Fade bottom>
+              <Fade>
                 <div>
                   <h3>Backend Apps</h3>
                   <p>
@@ -56,7 +56,7 @@ function About() {
                 </div>
               </Fade>
               
-            <Fade bottom>
+            <Fade>
               <div>
                 <h3>Native Apps</h3>
                 <p>
