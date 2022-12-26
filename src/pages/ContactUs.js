@@ -27,7 +27,7 @@ function ContactUs() {
  
   const changeEmail = ( str ) => {
     setEmail(str) ;
-    let result = email.match(
+    let result = str.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
     if (result) {
@@ -37,8 +37,6 @@ function ContactUs() {
     }
   }
   const handleSubmit = () => {
-    console.log("wuw");
-    console.log(data);
     let data = {
       user_name: name ,
       user_email: email ,
@@ -47,10 +45,12 @@ function ContactUs() {
     sendEmail(data)
   }
   const sendEmail = (data) => {
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, data , process.env.REACT_APP_PUBLIC_KEY)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_ID, 
+      process.env.REACT_APP_TEMPLATE_ID, 
+      data , 
+      process.env.REACT_APP_PUBLIC_KEY
+    ).then((result) => console.log(result.text) , (error) => {
           console.log(error.text);
       });
   };

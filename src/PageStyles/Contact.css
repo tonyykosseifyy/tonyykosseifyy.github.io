@@ -21,16 +21,3 @@
 .contact_form {
     margin-top: 70px ;
 }
-.contact .contact_form .css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
-    color: white 
-}
-.contact .contact_form .css-10botns-MuiInputBase-input-MuiFilledInput-input {
-    color: white;
-}
-.contact_form .css-15mnzpi-MuiInputBase-root-MuiFilledInput-root:before {
-    border-bottom: 1px solid rgb(97,218,251);
-}
-
-.contact .css-15mnzpi-MuiInputBase-root-MuiFilledInput-root:after {
-    border-bottom: 2px solid rgb(97,218,251);
-}
