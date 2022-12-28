@@ -1,0 +1,117 @@
+.work {
+    height: 100vh;
+    width: 100% ;
+    padding: 8vh 16vw ;
+    overflow-y: scroll;
+}
+
+
+.work h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4.5rem ;
+    margin-bottom: 20px;
+}
+
+.work_skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px ;
+}
+.work_skills > div {
+    color: rgb(153,153,153);
+    display: block ;
+    cursor: pointer;
+    padding: 6px ;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 1px 1px 4px black;
+    margin : 10px 0px ;
+    position: relative;
+    margin-right: 15px ;
+}
+.work_skills > div > span {
+    background-color: transparent;
+    z-index: 3 ;
+    position: relative;
+}
+.work_skills > div::after , .work_skills > div::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: rgb(81,81,81);
+    height: 50%;
+    width: 0px;
+    transition: width .3s ease-out ;
+    z-index: 2 ;
+}
+.work_skills > div::before {
+    top: 0 ;
+    left: 0 ;
+}
+.work_skills > div::after {
+    bottom : 0 ;
+    right: 0 ;
+}
+.work_skills > div:hover::after{
+    width: 100%;
+}
+.work_skills > div:hover::before{
+    width: 100%;
+}
+
+.work_projects {
+    margin-top: 40px ;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project {
+    cursor: pointer;
+    position: relative;
+    height: 200px ;
+    width: 350px ;
+    margin: 20px 0 ;
+}
+
+.project img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.project > div {
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    right: 0 ;
+    height: 0px ;
+    background-color: black ;
+    opacity: .75 ;
+    transition: .3s ease-out;
+    display: flex ;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    height: 0px ;
+}
+.project:hover > div {
+    height: 100% ;
+}
+.project a {
+    display: block ;
+    background-color: black ;
+    padding: 10px ;
+    transition: width .3s ease-out ;
+    z-index: 2 ;
+    color: rgb(153,153,153);
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    border-radius: 10px ;
+    color: white ;
+    text-decoration: none;
+    border: 1px solid white ;
+    transition: .3s ease-out ;
+}
+.project a:hover {
+    transform: scale(1.08);
+}
