@@ -40,6 +40,22 @@ function Work() {
               <a href="/" target="_blank">check github</a>
             </div>
           </div>
+          
+          <div className='project'>
+            <img src={require("../components/assets/tesla-clone.png")} alt="Tesla" />
+            <div>
+              <a href="/" target="_blank">check website</a>
+              <a href="/" target="_blank">check github</a>
+            </div>
+          </div>
+
+          <div className='project'>
+            <img src={require("../components/assets/coffee-shop.png")} alt="Coffee-shop" />
+            <div>
+              <a href="/" target="_blank">check website</a>
+              <a href="/" target="_blank">check github</a>
+            </div>
+          </div>
 
           <div className='project'>
             <img src={require("../components/assets/easy-bank.png")} alt="easy-bank" />
@@ -48,7 +64,24 @@ function Work() {
               <a href="/" target="_blank">check github</a>
             </div>
           </div>
+          
+          <div className='project'>
+            <img src={require("../components/assets/ip-address.png")} alt="ip-address-project" />
+            <div>
+              <a href="/" target="_blank">check website</a>
+              <a href="/" target="_blank">check github</a>
+            </div>
+          </div>
 
+          <div className='project'>
+            <img src={require("../components/assets/tip-calculator.png")} alt="tip-calculator" />
+            <div>
+              <a href="/" target="_blank">check website</a>
+              <a href="/" target="_blank">check github</a>
+            </div>
+          </div>
+
+            
         </div>
       </div>
     </div>
