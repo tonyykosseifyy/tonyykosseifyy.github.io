@@ -20,3 +20,13 @@
 .github_notvisible {
     transform: translateY(-400px) rotate(45deg);
 }
+
+@media only screen and (max-width: 425px) {
+    .github {
+        font-size: .8rem ;
+        height: 30px ;
+        width: 200px ;
+        top: 30px;
+        right: -50px;    
+    }
+}
