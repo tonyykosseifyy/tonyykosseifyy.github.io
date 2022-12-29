@@ -20,6 +20,17 @@
       bottom: 0px ;
       border-radius: 0px ;
       padding-bottom: 2px ;
-      background-color: black ;
+      background-color: transparent ;
+  }
+  .dock::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 50%;
+    z-index: -1;
+    transform: translate3d(-50%,0,0);
+    background-color: rgb(37, 37, 37);
+    bottom: -2px ;
   }
 }
