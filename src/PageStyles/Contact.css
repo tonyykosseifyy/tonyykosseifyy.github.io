@@ -67,3 +67,44 @@
     font-weight: 300 ;
     margin-left: 15px ;
 }
+
+@media only screen and (max-width: 768px) {
+    .contact_headings {
+        align-items: center;
+        text-align: center;
+    }
+    .contact_body_container {
+        flex-direction: column;
+    }
+    .contact h1 {
+        font-size: 3rem;
+    }
+    .contact span {
+        font-size: .8rem ;
+    }
+    .contact_social_media_links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto ;
+        margin-top: 30px ;
+    
+    }
+    .contact_social_media_links > div {
+        margin: 10px;
+    }    
+}
+
+@media only screen and (max-width: 425px) {
+    .contact_social_media_links > div > p {
+        display: none;
+    }
+    .contact_social_media_links > div {
+        min-width: auto;
+        padding: 0 ;
+    }
+    .contact_up_cred {
+        flex-direction: column;
+    }
+}

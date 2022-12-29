@@ -90,7 +90,7 @@ function ContactUs() {
           <div className='contact_form contact_headings'>
             <FormControl onSubmit={() => handleSubmit()} sx={{width: "100%"}}>
               <div className='contact_up_cred'>
-                <TextField fullWidth onChange={(e) => setName(e.target.value)} value={name} required color='primary' id="outlined-basic" label="Name" variant="outlined" />
+                <TextField sx={{marginBottom:"20px"}} fullWidth onChange={(e) => setName(e.target.value)} value={name} required color='primary' id="outlined-basic" label="Name" variant="outlined" />
                 <TextField fullWidth error={emailError} onChange={(e) => changeEmail(e.target.value)} value={email} required type="email" id="filled-basic" label="Email Address" variant="outlined" />
               </div>
               

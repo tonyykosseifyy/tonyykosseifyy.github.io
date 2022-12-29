@@ -12,6 +12,7 @@
 
 .home {
     font-family: 'League Spartan', sans-serif;
+    padding: 0 2vw ;
 }
 .presentation {
     text-align: center;
@@ -68,4 +69,23 @@ h1 > span.name {
 }
 .linkedin-holder {
     background-color: rgb(0,119,181); 
+}
+
+@media only screen and (max-width:425px) {
+    .presentation > h1 {
+        font-size: 1.4rem;
+    }
+    .presentation > h2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .presentation > h1 {
+        font-size: 1.2rem;
+    }
+    .presentation > h2 {
+        font-size: .8rem ;
+    }
+    
 }

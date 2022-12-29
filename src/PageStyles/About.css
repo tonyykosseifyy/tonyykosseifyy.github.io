@@ -62,3 +62,38 @@
 
 }
 
+
+@media only screen and (max-width: 768px){
+    .about {
+        padding: 0 6vw ;
+    }
+    .about_me_services_containers > div {
+        margin-bottom: 20px;
+        max-width: 500px;
+    }
+    .about_me_services_containers {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .about_me_services_containers:nth-child(2) {
+        padding-bottom: 16vh ;
+    }
+    .about_me_headings {
+        height: auto ;
+        padding-top: 12vh;
+        text-align: center;
+    }
+    .about_me h2 {
+        margin-bottom: 20px;
+        font-size: 1.3rem ;
+    }
+    .about_me h1 {
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 425px){
+    .contact{
+        padding: 8vh 3vw ;
+    }
+}
