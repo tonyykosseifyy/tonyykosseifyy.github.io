@@ -81,7 +81,17 @@ function Work() {
             </div>
           </div>
 
-            
+          <div className='project'>
+            <div className='mobile' style={{display:"flex"}} >
+              <img src="https://raw.githubusercontent.com/selimellieh72/MetaMedApp/main/preview/map.png?token=GHSAT0AAAAAAB4VAEIY2H6JMVZYSHPOVUGGY5N7TTQ" alt="mobile app" />
+              <img src="https://raw.githubusercontent.com/selimellieh72/MetaMedApp/main/preview/cam.png?token=GHSAT0AAAAAAB4VAEIYYUNBB4GTHWHZAZKIY5N7V5Q" alt='Mobile' />
+              <img src="https://raw.githubusercontent.com/selimellieh72/MetaMedApp/main/preview/credit.png?token=GHSAT0AAAAAAB4VAEIY4NFJEMTRFFBIBY2GY5N7VOA" alt="mobile app" />
+              <img src="https://raw.githubusercontent.com/selimellieh72/MetaMedApp/main/preview/transcripts.png?token=GHSAT0AAAAAAB4VAEIYWK4RQ73X55UFY5SGY5N7X6A" alt="mobile app" />
+            </div>
+            <div>
+              <a href="/" target="_blank">check github</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
