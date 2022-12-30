@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d607015.css",
+    "main.js": "/static/js/main.af3082bf.js",
+    "static/media/coffee-shop.png": "/static/media/coffee-shop.a540f47ed429582b23db.png",
+    "static/media/netflix.png": "/static/media/netflix.e963dc9b64aafdcb864e.png",
+    "static/media/amazon-clone.png": "/static/media/amazon-clone.8c58940a9b7f79e5dcb7.png",
+    "static/media/tesla-clone.png": "/static/media/tesla-clone.7ba1a3a70b254a746fb5.png",
+    "static/media/ip-address.png": "/static/media/ip-address.f4a02c5d86f52f731dc7.png",
+    "static/media/developer.png": "/static/media/developer.8c63fc68fffb041de537.png",
+    "static/media/metamed2.png": "/static/media/metamed2.4a51d0a96b063c69a946.png",
+    "static/media/easy-bank.png": "/static/media/easy-bank.fa30ec082e5595d52668.png",
+    "static/media/tip-calculator.png": "/static/media/tip-calculator.f1d80a870b66b8430fa4.png",
+    "static/media/metamed1.png": "/static/media/metamed1.ad1ae66631247ab4da68.png",
+    "index.html": "/index.html",
+    "main.6d607015.css.map": "/static/css/main.6d607015.css.map",
+    "main.af3082bf.js.map": "/static/js/main.af3082bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d607015.css",
+    "static/js/main.af3082bf.js"
+  ]
+}
