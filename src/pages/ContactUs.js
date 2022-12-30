@@ -112,25 +112,30 @@ function ContactUs() {
               
           <div className='contact_social_media_links'>
             <Fade cascade>
-              <div style={{backgroundColor: "rgb(38,38,38)"}}>
+              <div style={{backgroundColor: "rgb(38,38,38)", position:"relative"}}>
                 <img src={require("../components/assets/github.png")} alt="github"/>
                 <p>Github</p>
+                <a target="_blank" className='link' href='https://github.com/tonyykosseifyy' alt="github" />
               </div>
-              <div style={{backgroundColor: "rgb(0,119,181)"}}>
+              <div style={{backgroundColor: "rgb(0,119,181)", position:"relative"}}>
                 <img src={require("../components/assets/linkedin.png")} alt="linkedin"/>
                 <p>Linkedin</p>
+                <a target="_blank" className="link" href="https://www.linkedin.com/in/tony-kosseify-17aa191b7/" alt="linkedin"/>
               </div>
-              <div style={{backgroundColor: "rgb(76,175,80)"}}>
+              <div style={{backgroundColor: "rgb(76,175,80)", position:"relative"}}>
                 <img src={require("../components/assets/whatsapp.png")} alt="whatsapp"/>
                 <p>Whatsapp</p>
+                <a target="_blank" className="link" href="https://wa.me/96103018765" alt="wpp"/>
               </div>
-              <div style={{backgroundColor: "rgb(92,107,192)"}}>
+              <div style={{backgroundColor: "rgb(92,107,192)", position:"relative"}}>
                 <img style={{width:"35px"}} src={require("../components/assets/discord.png")} alt="discord"/>
                 <p>Discord</p>
+                <a target="_blank" className="link" href="https://discordapp.com/users/788481107837976616" alt="discord"/>
               </div>
-              <div style={{backgroundColor: "rgb(3,155,229)"}}>
+              <div style={{backgroundColor: "rgb(3,155,229)", position:"relative"}}>
                 <img src={require("../components/assets/telegram.png")} alt="Telegram"/>
                 <p>Telegram</p>
+                <a target="_blank" className='link' href="https://t.me/tonyykosseifyy" alt="telegram" />
               </div>
               </Fade>
           </div>

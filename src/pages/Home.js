@@ -19,11 +19,13 @@ const Home = () => {
       </div>
       
       <div className='social_media_links'>
-        <div className='github-holder'>
+        <div className='github-holder holder'>
           <img src={require("../components/assets/github.png")} alt="github" />
+          <a target="_blank" className='link' href='https://github.com/tonyykosseifyy' alt="github" />
         </div>
-        <div className='linkedin-holder'>
+        <div className='linkedin-holder holder'>
           <img src={require("../components/assets/linkedin.png")} alt="linkedin" />
+          <a target="_blank" className='link' href='https://www.linkedin.com/in/tony-kosseify-17aa191b7/' alt="linkedin" />
         </div>
       </div>
     </div>

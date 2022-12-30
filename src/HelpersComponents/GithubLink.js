@@ -5,7 +5,10 @@ import "./helpers.styles.css";
 
 const GithubLink = ({ end }) => {
   return (
-    <div className={`github ${end ? "" : "github_notvisible"}`}>Follow on Github</div>
+    <div className={`github ${end ? "" : "github_notvisible"}`}>
+      Follow on Github
+      <a target="_blank" className='link' href='https://github.com/tonyykosseifyy' alt="github" />
+    </div>
   );
 };
 

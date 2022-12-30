@@ -70,6 +70,19 @@ h1 > span.name {
 .linkedin-holder {
     background-color: rgb(0,119,181); 
 }
+.holder {
+    position: relative;
+}
+.link {
+    position: absolute ;
+    top: 0 ;
+    right: 0 ;
+    left: 0 ;
+    bottom : 0 ;
+    display: block ;
+    z-index: 1 ;
+}
+
 
 @media only screen and (max-width:425px) {
     .presentation > h1 {
